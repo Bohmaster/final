@@ -5,7 +5,12 @@ angular.module('the_final')
       // init
       $scope.categories = [];
       $scope.products = [];
-      $scope.categorySelected = false;
+
+      if ($stateParams.categoryId || $stateParams.subCategoryId) {
+        $scope.categorySelected = true;
+      } else {
+        $scope.categorySelected = false;
+      }
 
       // pagination
       var limit = 2;
@@ -18,9 +23,10 @@ angular.module('the_final')
 
       $scope.pages = [];
 
+      console.log($stateParams);
+
       loadCategories();
       loadProducts();
-      countProducts();
 
       // check product state
       if ($stateParams.categoryId) {
@@ -35,6 +41,20 @@ angular.module('the_final')
         }, function(data) {
           $scope.products = data;
         });
+        Product.count({
+          where: {
+            categoryId: $stateParams.categoryId
+          }
+        }, function(data) {
+          var totalCount = data.count;
+          var pages = totalCount / limit;
+
+          for	(var index = 0; index < pages; index++) {
+            var _page = index + 1;
+            $scope.pages.push(_page.toString());
+          }
+          console.log(data.count);
+        });
       } else if ($stateParams.subCategoryId) {
         Product.find({
           filter: {
@@ -46,9 +66,48 @@ angular.module('the_final')
           }
         }, function(data) {
           $scope.products = data;
+          console.log(data);
         });
-      } else {
-        console.log($stateParams);
+        Product.count({
+            where: {
+              subCategoryId: $stateParams.subCategoryId
+            }
+          }, function(data) {
+            var totalCount = data.count;
+            var pages = totalCount / limit;
+
+            for	(var index = 0; index < pages; index++) {
+              var _page = index + 1;
+              $scope.pages.push(_page.toString());
+          }
+        });
+      } else if ($stateParams.query) {
+          Product.find({
+            filter: {
+              where: {
+                name: {
+                  like: $stateParams.query + '%'
+                }
+              }
+            }
+          }, function(data) {
+            $scope.products = data;
+            console.log(data);
+          }, function(err) {
+            console.log(err);
+          });
+      }
+      else {
+        Product.count(function(data) {
+          var totalCount = data.count;
+          var pages = totalCount / limit;
+
+          for	(var index = 0; index < pages; index++) {
+            var _page = index + 1;
+          $scope.pages.push(_page.toString());
+         }
+         console.log(data.count);
+        });
       }
 
       // public methods
@@ -61,9 +120,8 @@ angular.module('the_final')
           }
         }, function(data) {
           $scope.currentCategory = data;
+          $scope.categorySelected = true;
         });
-
-        $scope.categorySelected = true;
       };
 
       // loaders
@@ -84,18 +142,7 @@ angular.module('the_final')
         });
       }
 
-      function countProducts() {
-        Product.count(function(data) {
-          var totalCount = data.count;
-          var pages = totalCount / limit;
+      //console.log(page, offset);
 
-          for	(var index = 0; index < pages; index++) {
-            var _page = index + 1;
-            $scope.pages.push(_page.toString());
-          }
-        });
-      }
-
-      console.log(page, offset);
-
+      //console.log($scope.categorySelected);
   });

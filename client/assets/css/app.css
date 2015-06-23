@@ -9,8 +9,13 @@ body {
 }
 
 #categories {
-  height: 50px;
+  height: 40px;
   background: darkgrey;
+}
+
+#sub-categories {
+  height: auto;
+  background: dimgrey;
 }
 
 #products {
@@ -22,19 +27,19 @@ body {
   margin-left: 10px;
 }
 
-.fade.ng-enter, .fade.ng-leave {
+.ng-enter, .ng-leave {
   position: absolute;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
-.fade.ng-enter {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+.ng-enter {
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
 }
 
-.fade.ng-leave {
-  -webkit-animation-name: fadeOutDown;
-  animation-name: fadeOutDown;
+.ng-leave {
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
 }
 

@@ -1,16 +1,29 @@
 <div id="categories">
-  <span class="items"
-        ng-repeat="c in categories"
-        ng-click="selectCategory(c.id)"
-        ui-sref=".category({categoryId:c.id})">
-    {{ c.name }}</span>
+  <div id="cat-nav" class="pull-left">
+    <span class="items"
+          ng-repeat="c in categories"
+          ng-click="selectCategory(c.id)"
+          ui-sref=".category({categoryId:c.id, page: 1})">
+    {{ c.name }}
+  </span>
+  </div>
+  <div id="search">
+    <input class="pull-right" type="text" ng-model="query.value"/>
+    <button ui-sref="app.products.search({query: query.value})" class="pull-right">Buscar</button>
+  </div>
 </div>
 
 <div id="sub-categories" ng-if="categorySelected">
   <span class="items"
         ng-repeat="sC in currentCategory"
-        ui-sref=".subCategory({subCategoryId:sC.id})">
+        ui-sref="app.products.subCategory({subCategoryId:sC.id, page: 1})">
     {{ sC.name }}
+  </span>
+</div>
+
+<div id="sub-categories" ng-if="!categorySelected">
+  <span class="items">
+    General
   </span>
 </div>
 

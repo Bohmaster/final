@@ -1,7 +1,12 @@
 <ul>
   <li ng-repeat="p in products">
-    {{ p.name }}
+    {{ p.name | capitalize }}
   </li>
 </ul>
 
-{{ pages }}
+<a class="items"
+   page="{{p}}"
+   ng-repeat="p in pages"
+   ui-sref="app.products.subCategory({page: p})">
+  {{p}}
+</a>

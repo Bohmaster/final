@@ -45,6 +45,7 @@ angular.module('the_final')
         var z = $('#categories');
         var val = $(z).find('option[value="' + x + '"]');
         var endVal = val.attr('id');
+        console.log(x, z, val);
         $scope.product.category = endVal;
       });
 

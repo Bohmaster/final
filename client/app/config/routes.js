@@ -24,17 +24,23 @@ angular.module('the_final')
         templateUrl: 'app/views/products/main.html',
         controller: 'ProductsController'
       })
+      .state('app.products.search', {
+        url: '/search/:query',
+        templateUrl: 'app/views/products/search.html',
+        controller: 'ProductsController'
+      })
       .state('app.products.list', {
-        url: '/:page',
-        templateUrl: 'app/views/products/list.html'
+        url: '/page/:page',
+        templateUrl: 'app/views/products/list.html',
+        controller: 'ProductsController'
       })
       .state('app.products.category', {
-        url: '/categoria/:categoryId',
+        url: '/categoria/:categoryId/:page',
         templateUrl: 'app/views/products/category.html',
         controller: 'ProductsController'
       })
       .state('app.products.subCategory', {
-        url: '/subcategoria/:subCategoryId',
+        url: '/subcategoria/:subCategoryId/:page',
         templateUrl: 'app/views/products/sub.html',
         controller: 'ProductsController'
       });
