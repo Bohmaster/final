@@ -1,0 +1,19 @@
+<div id="categories">
+  <span class="items"
+        ng-repeat="c in categories"
+        ng-click="selectCategory(c.id)"
+        ui-sref=".category({categoryId:c.id})">
+    {{ c.name }}</span>
+</div>
+
+<div id="sub-categories" ng-if="categorySelected">
+  <span class="items"
+        ng-repeat="sC in currentCategory"
+        ui-sref=".subCategory({subCategoryId:sC.id})">
+    {{ sC.name }}
+  </span>
+</div>
+
+<div id="products">
+  <div ui-view></div>
+</div>

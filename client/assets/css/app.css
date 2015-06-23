@@ -1,0 +1,40 @@
+body {
+  background: lightgrey;
+}
+
+#nav-bar {
+  position: relative;
+  height: 100px;
+  background: #808080;
+}
+
+#categories {
+  height: 50px;
+  background: darkgrey;
+}
+
+#products {
+  position: relative;
+  height: 300px;
+}
+
+.items {
+  margin-left: 10px;
+}
+
+.fade.ng-enter, .fade.ng-leave {
+  position: absolute;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fade.ng-enter {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+.fade.ng-leave {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+

@@ -1,0 +1,11 @@
+<ul>
+  <li ng-repeat="p in products">
+    {{ p.name }}
+  </li>
+</ul>
+
+<span class="items"
+      ng-repeat="p in pages"
+      ui-sref=".({page: p})">
+  {{p}}
+</span>

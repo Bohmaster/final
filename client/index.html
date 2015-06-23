@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="the_final">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="assets/js/vendor/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="assets/css/animate.css"/>
+  <link rel="stylesheet" href="assets/css/app.css"/>
+
+  <script src="assets/js/vendor/jquery/dist/jquery.js"></script>
+  <script src="assets/js/vendor/angular/angular.js"></script>
+  <script src="assets/js/vendor/angular-resource/angular-resource.js"></script>
+  <script src="assets/js/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="assets/js/vendor/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="assets/js/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div ui-view></div>
+  </div>
+
+  <!-- app -->
+  <script src="app/app.js"></script>
+  <script src="app/config/routes.js"></script>
+  <script src="app/services/lb-services.js"></script>
+  <script src="app/controllers/MainController.js"></script>
+  <script src="app/controllers/ProductsController.js"></script>
+  <script src="app/controllers/AdminController.js"></script>
+  <script src="app/directives/getValue.js"></script>
+
+</body>
+</html>
