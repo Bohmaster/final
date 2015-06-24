@@ -27,19 +27,3 @@ body {
   margin-left: 10px;
 }
 
-.ng-enter, .ng-leave {
-  position: absolute;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-}
-
-.ng-enter {
-  -webkit-animation-name: flipInX;
-  animation-name: flipInX;
-}
-
-.ng-leave {
-  -webkit-animation-name: flipInX;
-  animation-name: flipInX;
-}
-
