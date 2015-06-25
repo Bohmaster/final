@@ -6,3 +6,4 @@ angular.module('the_final', [
   'ngAnimate',
   'lbServices'
 ]);
+

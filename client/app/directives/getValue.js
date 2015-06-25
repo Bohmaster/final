@@ -1,12 +1,20 @@
 'use strict';
 angular.module('the_final')
-  .directive('getValue', function() {
+  .directive('accordion', function() {
     return {
       restrict: 'A',
       link: function(scope, elem, attrs) {
-        $('#category').on('change', function() {
-          console.log('event');
-        })
+        $(elem).find('.accordion-toggle').click(function(){
+
+          console.log('clicked');
+
+          //Expand or collapse this panel
+          $(this).next().slideToggle('fast');
+
+          //Hide the other panels
+          $(".accordion-content").not($(this).next()).slideUp('fast');
+
+        });
       }
     }
   });

@@ -2,6 +2,12 @@ body {
   background: lightgrey;
 }
 
+.container-fluid {
+  padding: 0px;
+}
+
+/* Application */
+
 #nav-bar {
   position: relative;
   height: 100px;
@@ -27,3 +33,40 @@ body {
   margin-left: 10px;
 }
 
+#accordion {
+  background: blanchedalmond;
+}
+
+.accordion-toggle {cursor: pointer;}
+.accordion-content {display: none;}
+.accordion-content.default {display: block;}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  -webkit-animation: flipInX 1s;
+  -moz-animation: flipInX 1s;
+  -ms-animation: flipInX 1s;
+  animation: flipInX 1s;
+}
+
+
+[ui-view].ng-leave {
+  -webkit-animation: flipInX 1s;
+  -moz-animation: flipInX 1s;
+  -ms-animation: flipInX 1s;
+  animation: flipInX 1s;
+}
+
+[ui-view].ng-leave-active {
+  -webkit-animation: flipOutX 1s;
+  -moz-animation: flipOutX 1s;
+  -ms-animation: flipOutX 1s;
+  animation: flipOutX 1s;
+}

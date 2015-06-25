@@ -124,6 +124,14 @@ angular.module('the_final')
         });
       };
 
+      $scope.toggleNav = function() {
+        if ($scope.mobileNav) {
+          $scope.mobileNav = false;
+        } else {
+          $scope.mobileNav = true;
+        }
+      };
+
       // loaders
       function loadCategories() {
         Category.find(function(data) {
