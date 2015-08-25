@@ -14,8 +14,13 @@ angular.module('the_final')
         templateUrl: 'app/views/home.html'
       })
       .state('app.admin', {
+        abstract: true,
         url: '/admin',
-        templateUrl: 'app/views/admin/products/main.html',
+        templateUrl: 'app/views/admin/main.html'
+      })
+      .state('app.admin.products', {
+        url: '/products',
+        templateUrl: 'app/views/admin/products/add.html',
         controller: 'AdminController'
       })
       .state('app.products', {
@@ -43,6 +48,22 @@ angular.module('the_final')
         url: '/subcategoria/:subCategoryId/:page',
         templateUrl: 'app/views/products/sub.html',
         controller: 'ProductsController'
+      })
+      .state('app.news', {
+        abstract: true,
+        url: '/news',
+        templateUrl: 'app/views/news/main.html',
+        controller: 'NewsController'
+      })
+      .state('app.news.list', {
+        url: '/page/:page',
+        templateUrl: 'app/views/news/list.html',
+        controller: 'NewsController'
+      })
+      .state('app.news.detail', {
+        url: '/detail/:noticeId',
+        templateUrl: 'app/views/news/detail.html',
+        controller: 'NewsController'
       });
 
     $urlRouterProvider.otherwise('/app');

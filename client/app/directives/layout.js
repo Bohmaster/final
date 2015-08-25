@@ -53,4 +53,10 @@ angular.module('the_final')
         restrict: 'E',
         templateUrl: 'app/directives/views/contacto.html'
       }
+  })
+  .directive('productsHeader', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'app/directives/views/productsHeader.html'
+    }
   });

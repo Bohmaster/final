@@ -1,7 +1,3 @@
-body {
-  background: lightgrey;
-}
-
 .container-fluid {
   padding: 0px;
 }
@@ -70,3 +66,9 @@ body {
   -ms-animation: flipOutX 1s;
   animation: flipOutX 1s;
 }
+
+.margin {
+  margin-top: 10px;
+}
+
+.novedades {}

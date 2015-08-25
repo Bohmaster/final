@@ -1,0 +1,32 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Category": 1,
+    "SubCategory": 1,
+    "Product": 2,
+    "Event": 6
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Category": {},
+    "SubCategory": {},
+    "Product": {
+      "1": "{\"name\":\"asds\",\"price\":123123123,\"image\":\"sliderUltimo.jpg\",\"destacado\":true,\"codigo\":\"asd\",\"id\":1}"
+    },
+    "Event": {
+      "1": "{\"name\":\"asd\",\"description\":\"asd\",\"body\":\"asd\",\"image\":\"asd\",\"id\":1}",
+      "2": "{\"name\":\"asds\",\"description\":\"asd\",\"body\":\"asd\",\"image\":\"asd\",\"id\":2}",
+      "3": "{\"name\":\"asdss\",\"description\":\"asd\",\"body\":\"asd\",\"image\":\"asd\",\"id\":3}",
+      "4": "{\"name\":\"asdsss\",\"description\":\"asd\",\"body\":\"asd\",\"image\":\"asd\",\"id\":4}",
+      "5": "{\"name\":\"asdssss\",\"description\":\"asd\",\"body\":\"asd\",\"image\":\"asd\",\"id\":5}"
+    }
+  }
+}

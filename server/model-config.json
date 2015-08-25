@@ -26,15 +26,19 @@
     "dataSource": "db",
     "public": false
   },
-  "Product": {
-    "dataSource": "db",
-    "public": true
-  },
   "Category": {
     "dataSource": "db",
     "public": true
   },
   "SubCategory": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Event": {
     "dataSource": "db",
     "public": true
   }

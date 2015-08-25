@@ -13,7 +13,7 @@ angular.module('the_final')
       }
 
       // pagination
-      var limit = 2;
+      var limit = 4;
       var page = $stateParams.page;
       if (page == "1") {
         var offset = null;

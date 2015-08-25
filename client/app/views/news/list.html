@@ -1,0 +1,21 @@
+<div class="w-row" ng-repeat="p in articles">
+  <div class="w-col w-col-6 w-clearfix">
+    <img class="imgeventos" src="images/degrad.png" width="408">
+  </div>
+  <div class="w-col w-col-6">
+    <h3 class="novedades">Novedad</h3>
+    <p class="novedad">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+  </div>
+</div>
+<div class="w-section secpaginador" style="clear: both">
+  <div class="w-container">
+    <div class="divpaginacion">
+      <div class="botonpaginacion"
+           page="{{p}}"
+           ng-repeat="p in pages"
+           ui-sref="app.news.list({page: p})">
+        {{ p }}
+      </div>
+    </div>
+  </div>
+</div>
