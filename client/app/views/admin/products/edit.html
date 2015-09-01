@@ -1,7 +1,7 @@
-  <h3 style="color: black; text-align: center; margin-top: 25px;"> {{ product.name }}</h3>
+<h3 style="color: black; text-align: center; margin-top: 25px;"> {{ product.name }}</h3>
   <form name="todoForm" novalidate>
     <div class="form-group" style="background: white; padding: 20px;" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
-      <input type="text" class="form-control focus margin" name="name"
+      <input type="text" id="prueba" class="form-control focus margin" name="name"
              placeholder="Nombre" autocomplete="off" required
              ng-model="product.name">
       <input type="text" class="form-control focus margin" name="price"
@@ -10,12 +10,12 @@
       <input type="text" id="category" class="form-control focus margin" name="category" list="categories"
              placeholder="Seleccione categoría" autocomplete="off" required>
       <datalist id="categories">
-        <option get-value ng-repeat="c in categories" value="{{c.name}}" id="{{c.id}}">
+        <option  ng-repeat="c in categories" value="{{c.name}}" id="{{c.id}}">
       </datalist>
       <input type="text" id="subCategory" class="form-control focus margin" name="subCategory" list="subCategories"
              placeholder="Seleccione subcategoría" autocomplete="off" required>
       <datalist id="subCategories">
-        <option get-value ng-repeat="sC in subCategories" value="{{sC.name}}" id="{{sC.id}}">
+        <option ng-repeat="sC in subCategories" value="{{sC.name}}" id="{{sC.id}}">
       </datalist>
       <input type="text" class="form-control focus margin" name="name"
              placeholder="Código" autocomplete="off" required

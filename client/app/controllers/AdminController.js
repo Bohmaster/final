@@ -6,6 +6,7 @@ angular.module('the_final')
       $scope.product = {};
       $scope.categories = [];
       $scope.subCategories = [];
+      $scope.merca = "merca";
 
       loadCategories();
       loadProducts();
@@ -22,6 +23,7 @@ angular.module('the_final')
           codigo: $scope.product.codigo
         }, function(data) {
           console.log('Producto creado');
+          console.log($scope.product);
           loadProducts();
         });
         $scope.upload();
@@ -51,15 +53,6 @@ angular.module('the_final')
 
             loadCategories();
 
-            $('#category').on('input', function() {
-              var x = $('#category').val();
-              var z = $('#categories');
-              var val = $(z).find('option[value="' + x + '"]');
-              var endVal = val.attr('id');
-              console.log(x, z, val);
-              $scope.product.categoryId = endVal;
-            });
-
             function loadSubCategories() {
               SubCategory.find({
                 filter: {
@@ -78,19 +71,6 @@ angular.module('the_final')
                 $scope.categories = data;
               })
             }
-
-            $('#category').on('focusout', function() {
-              console.log('focus!');
-              loadSubCategories();
-            });
-
-            $('#subCategory').on('input', function() {
-              var x = $('#subCategory').val();
-              var z = $('#subCategories');
-              var val = $(z).find('option[value="' + x + '"]');
-              var endVal = val.attr('id');
-              $scope.product.subCategoryId = endVal;
-            });
 
             function getCategories() {
               Category.findById({
@@ -142,6 +122,7 @@ angular.module('the_final')
                 })
                   .then(function(data) {
                     console.log(data);
+                    $scope.upload();
                     $rootScope.$broadcast('producto.editado');
                     $scope.$close(data);
                   });
@@ -158,10 +139,37 @@ angular.module('the_final')
                     console.log(data);
                     $rootScope.$broadcast('producto.editado');
                     $scope.$close(data);
-                    $scope.upload();
                 });
               }
-            }
+            };
+
+            $('#category').on('input', function() {
+              var x = $('#category').val();
+              var z = $('#categories');
+              var val = $(z).find('option[value="' + x + '"]');
+              var endVal = val.attr('id');
+              console.log(x, z, val);
+              $scope.product.categoryId = endVal;
+            });
+
+            $('#category').on('focusout', function() {
+              console.log('focus!');
+              loadSubCategories();
+            });
+
+            $('#subCategory').on('input', function() {
+              var x = $('#subCategory').val();
+              var z = $('#subCategories');
+              var val = $(z).find('option[value="' + x + '"]');
+              var endVal = val.attr('id');
+              $scope.product.subCategoryId = endVal;
+              console.log(endVal);
+            });
+
+            $('#prueba').on('input', function() {
+              console.log('!!!!!!!!!!!!!!!!');
+            });
+
           }
         });
       };
@@ -236,7 +244,7 @@ angular.module('the_final')
         var z = $('#subCategories');
         var val = $(z).find('option[value="' + x + '"]');
         var endVal = val.attr('id');
-        $scope.product.subCategory = endVal;
+        $scope.product.subCategoryId = endVal;
       });
 
       $scope.$on('producto.editado', function(event) {
