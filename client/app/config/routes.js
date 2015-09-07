@@ -19,9 +19,19 @@ angular.module('the_final')
         templateUrl: 'app/views/admin/main.html'
       })
       .state('app.admin.products', {
-        url: '/products',
+        url: '/productos',
         templateUrl: 'app/views/admin/products/add.html',
         controller: 'AdminController'
+      })
+      .state('app.admin.news', {
+        url: '/novedades',
+        templateUrl: 'app/views/admin/news/add.html',
+        controller: 'NewsController'
+      })
+      .state('app.admin.recipes', {
+        url: '/recetas',
+        templateUrl: 'app/views/admin/recipes/add.html',
+        controller: 'RecipesController'
       })
       .state('app.products', {
         abstract: true,
@@ -63,7 +73,14 @@ angular.module('the_final')
       .state('app.news.detail', {
         url: '/detail/:noticeId',
         templateUrl: 'app/views/news/detail.html',
-        controller: 'NewsController'
+        resolve: {
+          detail: function($stateParams, Event) {
+            return Event.findById({id: $stateParams.noticeId});
+          }
+        },
+        controller: function($scope, detail) {
+          $scope.detail = detail;
+        }
       });
 
     $urlRouterProvider.otherwise('/app');

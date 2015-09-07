@@ -33,6 +33,13 @@
   background: blanchedalmond;
 }
 
+.novedadi {
+  padding: 15px;
+  font-size: 17px;
+  color: black;
+  font-family: Oxygen, sans-serif;
+}
+
 .accordion-toggle {cursor: pointer;}
 .accordion-content {display: none;}
 .accordion-content.default {display: block;}

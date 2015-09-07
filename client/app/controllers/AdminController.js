@@ -215,7 +215,7 @@ angular.module('the_final')
       function loadProducts() {
         Product.find({
           filter: {
-            limit: 4,
+            limit: 5,
             order: 'id DESC'
           }
         },function(data) {

@@ -41,5 +41,9 @@
   "Event": {
     "dataSource": "db",
     "public": true
+  },
+  "Recipes": {
+    "dataSource": "db",
+    "public": true
   }
 }

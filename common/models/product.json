@@ -7,9 +7,6 @@
     "name": {
       "type": "string"
     },
-    "price": {
-      "type": "number"
-    },
     "image": {
       "type": "string"
     },
@@ -21,6 +18,12 @@
     },
     "codigo": {
       "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "fecha": {
+      "type": "date"
     }
   },
   "validations": [],

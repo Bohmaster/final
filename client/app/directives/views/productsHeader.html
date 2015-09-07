@@ -2,11 +2,11 @@
   <div class="w-container">
     <div class="w-nav navbarprod" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
       <div class="w-container">
-        <a class="w-nav-brand brand productos" href="index.html"><img src="images/logoNavBar.png" width="71">
+        <a class="w-nav-brand brand productos" ui-sref="app.home" ui-sref-opts="{reload: true, autoscroll: true}"><img src="images/logoNavBar.png" width="71">
         </a>
         <h3 class="titulologo">Pescadería<br> Rosario</h3>
-        <div class="textnamepage">Noticias</div>
-        <nav class="w-nav-menu navmenu" role="navigation"><a class="w-nav-link navlink" href="index.html">Inicio</a>
+        <div class="textnamepage"></div>
+        <nav class="w-nav-menu navmenu" role="navigation"><a class="w-nav-link navlink" ui-sref="app.home" ui-sref="app.products.list({page: 1})" ui-sref-opts="{reload: true, autoscroll: true}">Inicio</a>
         </nav>
         <div class="w-nav-button botonmenu">
           <div class="w-icon-nav-menu iconomenu"></div>

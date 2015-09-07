@@ -2,7 +2,7 @@
   <div class="w-container">
     <div class="w-nav navbarprod" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
       <div class="w-container">
-        <a class="w-nav-brand brand productos" href="index.html"><img src="images/logoNavBar.png" width="71">
+        <a class="w-nav-brand brand productos" ui-sref="app.home" ui-sref-opts="{reload: true, autoscroll: true}"><img src="images/logoNavBar.png" width="71">
         </a>
         <h3 class="titulologo">Pescadería<br> Rosario</h3>
         <div class="textnamepage">Administración</div>
@@ -17,13 +17,13 @@
   <div class="divcategorias">
     <div class="w-container">
       <div class="div2categorias">
-        <a class="w-inline-block linkcategorias" ui-sref="app.admin.products">
+        <a class="w-inline-block linkcategorias" ui-sref="app.admin.products" ui-sref-opts="{reload: true, autoscroll: true}">
           <div class="textcategoria">Productos</div>
         </a>
-        <a class="w-inline-block linkcategorias" href="#">
-          <div class="textcategoria">Eventos</div>
+        <a class="w-inline-block linkcategorias" ui-sref="app.admin.news" ui-sref-opts="{reload: true, autoscroll: true}">
+          <div class="textcategoria">Novedades</div>
         </a>
-        <a class="w-inline-block linkcategorias" href="#">
+        <a class="w-inline-block linkcategorias" ui-sref="app.admin.recipes" ui-sref-opts="{reload: true, autoscroll: true}">
           <div class="textcategoria">Recetas</div>
         </a>
       </div>

@@ -2,24 +2,14 @@
   <form name="todoForm" novalidate>
     <div class="form-group" style="background: white; padding: 20px;" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
       <input type="text" id="prueba" class="form-control focus margin" name="name"
-             placeholder="Nombre" autocomplete="off" required
+             placeholder="Nombre" autocomplete="off"
              ng-model="product.name">
       <input type="text" class="form-control focus margin" name="price"
-             placeholder="Precio" autocomplete="off" required
+             placeholder="Precio" autocomplete="off"
              ng-model="product.price">
-      <input type="text" id="category" class="form-control focus margin" name="category" list="categories"
-             placeholder="Seleccione categoría" autocomplete="off" required>
-      <datalist id="categories">
-        <option  ng-repeat="c in categories" value="{{c.name}}" id="{{c.id}}">
-      </datalist>
-      <input type="text" id="subCategory" class="form-control focus margin" name="subCategory" list="subCategories"
-             placeholder="Seleccione subcategoría" autocomplete="off" required>
-      <datalist id="subCategories">
-        <option ng-repeat="sC in subCategories" value="{{sC.name}}" id="{{sC.id}}">
-      </datalist>
-      <input type="text" class="form-control focus margin" name="name"
-             placeholder="Código" autocomplete="off" required
-             ng-model="product.codigo">
+          <input type="checkbox" class="form-control focus margin" name="destacado"
+             placeholder="Código" autocomplete="off"
+             ng-model="product.destacado">
 
       <input
         type="file"
