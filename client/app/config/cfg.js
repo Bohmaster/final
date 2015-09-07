@@ -4,7 +4,9 @@ angular.module('the_final')
 
     $rootScope.$on('$viewContentLoaded', function(event) {
 
-      Webflow.ready();
+      setTimeout(function() {
+        Webflow.ready();
+      }, 500);
 
     });
 

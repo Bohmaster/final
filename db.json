@@ -7,7 +7,7 @@
     "Role": 1,
     "Category": 5,
     "SubCategory": 3,
-    "Product": 28,
+    "Product": 30,
     "Event": 24,
     "Recipes": 5
   },
@@ -49,7 +49,9 @@
       "24": "{\"name\":\"asdasdsasdasd\",\"image\":\"slide7.jpg\",\"id\":24}",
       "25": "{\"name\":\"fsfsdfsfsdfds\",\"image\":\"slide2_1.jpg\",\"fecha\":\"2015-09-07T06:09:41.266Z\",\"id\":25}",
       "26": "{\"name\":\"asdadsasds\",\"image\":\"slide2.jpg\",\"price\":\"a\",\"fecha\":\"2015-09-07T06:12:01.241Z\",\"id\":26}",
-      "27": "{\"name\":\"asdasdad\",\"image\":\"patron_ola.png\",\"id\":27}"
+      "27": "{\"name\":\"asdasdad\",\"image\":\"patron_ola.png\",\"id\":27}",
+      "28": "{\"name\":\"asdadas\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"price\":\"dasdadsasdasd\",\"categoryId\":1,\"subCategoryId\":2,\"id\":28}",
+      "29": "{\"name\":\"adsa\",\"image\":\"imgDestacados.jpg\",\"price\":\"123142\",\"id\":29,\"destacado\":true}"
     },
     "Event": {
       "13": "{\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\",\"image\":\"notidestaca.jpg\",\"title\":\"Clase de Cocina de pescados\",\"body\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\",\"id\":13,\"important\":true}",

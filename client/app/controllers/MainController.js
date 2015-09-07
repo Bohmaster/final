@@ -10,6 +10,14 @@ angular.module('the_final')
 
     $scope.recetas = [];
 
+    $scope.showMap = function() {
+
+      console.log("a");
+
+      $('.divvelomapa').css('visibility', 'hidden');
+
+    };
+
     $scope.expandRecipe = function(id) {
 
       $modal.open({
